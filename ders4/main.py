@@ -1,11 +1,30 @@
 """
 WHILE DÖNGÜSÜ
+
+
+i = 10
+
+while i > 2:
+    i = i - 1
+    print("Hi")
+
+print("End")
 """
 
 """
 Döngülərdə:
     break, continue, pass
 """
+
+my_list = ["Salam", "Sagol", "Necesen","Baku", "Ganja", "Frankfurt"]
+
+i = -1
+while i < len(my_list) - 1:
+    i = i + 1
+    if my_list[i] == "Sagol":
+        continue
+    print(my_list[i])
+
 
 """ 
 enumerate()
