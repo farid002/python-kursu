@@ -1,7 +1,13 @@
 """
 enumerate()
 """
+"""
+alphabets = ["A", "B", "C", "D", "E", "F"]
 
+for index, alphabet in enumerate(alphabets):
+    if alphabet == "C":
+        print(index)
+"""
 """
 Tək sətirdə list elementləri üzərində əməliyyat (list comprehension)
 
@@ -19,7 +25,17 @@ for my_number in my_list:
     squares.append(my_number**2)
 print(squares)
 """
+"""
+my_list = [1, 2, 3]
+squares = []
 
+for my_number in my_list:
+    squares.append(my_number**2)
+
+
+squares = sum([my_number**2 for my_number in [1,3,4,5,6]])
+print(squares)
+"""
 
 """
 Tək və ya cütlüyü yoxlayan proqram
@@ -37,6 +53,17 @@ for my_number in my_list:
     else:
         result.append("Tək")
 print(result)
+"""
+"""
+print([my_number**2 if my_number % 2 == 0 else -1 for my_number in [1,2,3,4,5,6]])
+
+my_list = []
+for my_number in [1,2,3,4,5,6]:
+    if my_number % 2 == 0:
+        my_list.append(my_number**2)
+    else:
+        my_list.append(-1)
+print(my_list)
 """
 
 """

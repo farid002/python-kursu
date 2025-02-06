@@ -14,3 +14,20 @@ tələbələrin adlarını və ballarını çap edin.
 """
 students = ["Ali", "Farhad", "Oghuz", "Osman", "Vagif", "Farid", "Elvin", "Akbar"]
 notes = [30, 85, 82, 93, 85, 35, 27, 80]
+for index, student in enumerate(students):
+    print(f"{index+1}. {student} - {notes[index]}")
+print("---------------------------------")
+elliden_cox_bal_toplayanlar = [print(note,"-", students[index]) for index, note in enumerate(notes) if note >= 50]
+
+print("---------------------------------")
+
+orta_bal = sum(notes)/len(notes)
+print(f"Orta bal:{orta_bal}")
+
+print("---------------------------------")
+
+
+en_cox_bal = max(notes)
+en_cox_balin_indexi = notes.index(en_cox_bal)
+en_cox_bal_yigan = students[en_cox_balin_indexi]
+print(f"En cox bal yigan telebe:\n{en_cox_balin_indexi}. {en_cox_bal_yigan}-{en_cox_bal}")
