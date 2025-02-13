@@ -1,0 +1,14 @@
+"""
+Istifadəçidən 10 - 200 arasında bir tam ədəd alın.
+ve onun cut olub olmadigini yoxlayan kod yazin.
+"""
+
+BEGIN
+get NUMBER between 10-200 from USER
+IF NUMBER is divided by 2
+    PRINT TO TERMINAL: DIVIDED BY 2
+ELSE
+    DO NOTHIING
+END
+
+
