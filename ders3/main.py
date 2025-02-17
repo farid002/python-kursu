@@ -62,6 +62,13 @@ start default: 0
 stop mütləq təyin olunmalıdır
 step default: 1
 """
+"""
+0   -- index, value
+2   -- index, value
+(2, 4)   -- index, value
+(3, 6)   -- index, value
+(4, 8)   -- index, value
+"""
 
 """
 Listlərdə for döngüsü
@@ -71,9 +78,13 @@ for item in my_list:
     print(item)
 """
 
+
 my_list = [12, 15, 1556, 15, -5.14, 323434, 34344]
 for element in my_list:
     print(element)
+    if element == 15:
+        pass
+    print("swaqda")
 
 for element in range(15, 0, -1):
     print(element)

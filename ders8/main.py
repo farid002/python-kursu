@@ -18,6 +18,11 @@ birthday = (1999, 5, 12)
 for index, value in enumerate(my_list):
     print("")
 
+
+my_list = [(0, 1), (4, 5), (7, 8)]
+for something in enumerate(my_list):
+    print(something)
+
 """
 SET
 - Unikal (tekrarlanmayan deyerler)
@@ -45,6 +50,9 @@ print("remove 1", my_set)
 print("Disjoint", my_set.isdisjoint(my_set_2))
 my_set.intersection_update(my_set_2)
 print("Inter Update", my_set)
+my_list = [3,5,6,5,65,46,3,52,34,2,34,2,4,25,35,3,6,4,76,4567,3,3245,23,4,3]
+print("????????????")
+print(set(my_list))
 
 
 print("=========================")
@@ -69,6 +77,27 @@ my_dict = {
     "c": {
         "c": [7, 8, 9],
     },
+}
+
+my_dict_2 = {
+    "Vali": None,
+    "Ali": {
+        {"Ballar": [40, 50, 60], }
+    },
+    "John": {
+        "Ballar": [40, 50, 60],
+        "email": "strin@asds",
+        "family": {
+            "father": {
+                "name": "strin",
+                "age": 22,
+            },
+            "mother": {
+                "name": "strin",
+                "age": 22,
+            }
+        }
+    }
 }
 
 for key, value in my_dict.items():

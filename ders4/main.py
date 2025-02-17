@@ -11,6 +11,12 @@ while i > 2:
 print("End")
 """
 
+i = 10
+
+while i >= 2:
+    print(i)
+    i = i - 1
+
 """
 Döngülərdə:
     break, continue, pass
@@ -29,6 +35,10 @@ while i < len(my_list) - 1:
 """ 
 enumerate()
 """
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+squares = [my_number**2 for my_number in my_list if my_number%2 == 0]
+print(squares)
+
 
 """
 Tək sətirdə list elementləri üzərində əməliyyat (list comprehension)
@@ -75,6 +85,16 @@ flattened = [item for row in my_list for item in row]
 print(flattened)
 """
 
+my_list = [[1, 5, 3], [4, 5, 6], [7, 4, 9]]
+flattened = (item for row in my_list for item in row)
+
+for item in flattened:
+    print(item)
+    break
+else:
+    print("salam")
+
 """
 Döngülərdə else
+Tek qayda: Loop icinde break etdise, else'e girmeyecek. Eks halda (break ishlense ancaq break'e girmese bele) else'e girecek
 """

@@ -118,3 +118,9 @@ Tez-tez edilən xətalar:
     - İndentasiya
     - Məntiqi xətalar: and, or birləşmələri
 """
+
+age = 50
+height = 180
+my_bool = (age >= 10 and height > 180) or (age >= 50 and height > 180)
+print(my_bool)
+
