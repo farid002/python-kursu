@@ -12,3 +12,8 @@ Tapşırıq 2: İki Ədədin Cəmi
 Tapşırıq 3: Faktoriyal Hesablama
 Bir funksiya yazın faktoriyal(n), hansı ki, verilmiş n ədədinin faktoriyalını hesablayır və qaytarır.
 """
+
+"""
+Tapşırıq 4: main() funksiyası yazım, hansı ki 3 parameter, ad və 2 integer ədəd alıb, istifadəçini salamlayıb, ədədləri
+toplayıb faktorialını print edir. Yuxarıda yazdığınız funksiyaların hamısını istifadə edin
+"""
