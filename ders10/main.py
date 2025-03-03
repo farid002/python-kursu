@@ -18,6 +18,11 @@ Parametrlər
 Defolt dəyər
 """
 def iki_eded_cemi(a, b):
+    """
+    :param a: int
+    :param b: int
+    :return: int Iki ededin (a ve b) cemi
+    """
     global my_global_variable
     my_global_variable = 5000
     print(my_global_variable)

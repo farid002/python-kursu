@@ -19,7 +19,12 @@ toplayıb faktorialını print edir. Yuxarıda yazdığınız funksiyaların ham
 def salamla(ad):
     print(f"Necesen {ad}?")
 
-def iki_ededin_cemi (a, b):
+def iki_ededin_cemi (a: int, b: int) -> int:
+    """
+    :param a: ilk tam eded
+    :param b: ikinci tam eded
+    :return: bu ededlerin cemini
+    """
     return a + b
 
 def factorial(n):
