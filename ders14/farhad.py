@@ -13,6 +13,7 @@ class BankAccount:
         self.balance -= amount
         hesab.balans_goster()
 
+
     def balans_goster(self):
         print(self.balance)
 
