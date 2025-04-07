@@ -22,4 +22,5 @@ Lazimli git commandlari:
   git merge
 
 .gitignore
+README.md
 """
