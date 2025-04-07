@@ -24,3 +24,4 @@ Lazimli git commandlari:
 .gitignore
 README.md
 """
+"test"
