@@ -25,3 +25,4 @@ Lazimli git commandlari:
 README.md
 """
 "test"
+"test Osman"
