@@ -13,13 +13,14 @@ Terminler:
 
 Lazimli git commandlari:
   git clone
-  git add
-  git commit
+  git add <filename>
+  git commit -m"Message"
   git push
+  git pull
   git log
-  git checkout
+  git checkout <branch>
   git status
-  git merge
+  git merge <branch>
 
 .gitignore
 README.md
