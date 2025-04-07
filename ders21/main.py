@@ -26,3 +26,5 @@ README.md
 """
 "test"
 "test Osman"
+"Oghuz test"
+"Oghuz test2"
