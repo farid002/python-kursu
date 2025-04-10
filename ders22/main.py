@@ -74,3 +74,30 @@ for satir in cursor.fetchall():
 conn.commit()
 conn.close()
 """
+
+import sqlite3
+
+# Qoşul
+conn = sqlite3.connect('telebeler.db')
+cursor = conn.cursor()
+
+# Cədvəl yarat
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS telebeler (
+    id INTEGER PRIMARY KEY,
+    ad TEXT,
+    yas INTEGER
+)
+''')
+
+# Məlumat əlavə et
+cursor.execute('INSERT INTO telebeler (ad, yas) VALUES (?, ?)', ('Anar', 22))
+
+# Məlumat oxu
+cursor.execute('SELECT * FROM telebeler')
+for satir in cursor.fetchall():
+    print(satir)
+
+# Bağla
+conn.commit()
+conn.close()
