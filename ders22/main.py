@@ -1,11 +1,86 @@
 # https://sqliteonline.com/
 """
-CREATE TABLE
-INSERT INTO
-SELECT
-UPDATE
-DELETE
+CREATE TABLE <table_name> (col1 INTEGER, col2 TEXT, col3 TEXT);
+INSERT INTO <table_name> (col1, col2, col3) VALUES (val1, val2, val3);
+SELECT col1, col2, col3 FROM <table_name>;
+UPDATE <table_name> SET col1 = val1, col2 = val2, col3 = val3 WHERE ...;
+DELETE FROM <table_name> WHERE ...;
+DROP TABLE <table_name>;
+ALTER TABLE <table_name> ADD COLUMN <column_name> INTEGER;
 
+CREATE INDEX
+DROP INDEX
+COMMENT ON
+
+=========================================================
+DATATYPES
+
+Numbers (whole):
+    SMALLINT    -  2bytes   - -32K:32K
+    INTEGER     -  4bytes   - -2B:2B
+    BIGINT      -  8bytes   - very large integer values
+
+Fractional:
+    REAL                - 6 digits after comma
+    DOUBLE PRECISION    - 15 digits after comma
+    FLOAT               - dynamic
+
+Date:
+    DATE    - Date (YYYY-MM-DD)
+    TIME    - Time without timezone
+    TIME WITH TIME ZONE - Time with timezone
+    TIMESTAMP (seconds since 01.01.1970) - Date + time without timezone
+    TIMESTAMP WITH TIME ZONE - Date + time with timezone
+    INTERVAL - A span of time (e.g. '2 days 3 hours')
+
+Bool:
+    BOOLEAN - Holds TRUE, FALSE, NULL
+
+Geometric Types:
+    POINT   | (x, y) coordinates
+    LINE    | Infinite line
+    LSEG    | Line segment
+    BOX     | Rectangular box
+    CIRCLE  | Circle
+    POLYGON | Polygon
+
+Text:
+    TEXT -
+
+=========================================================
+
+=====================================================================
+HANDS-ON
+
+CREATE TABLE students (
+  id SERIAL PRIMARY KEY,
+  name TEXT,
+  age INTEGER,
+  height FLOAT(2),
+  have_siblings BOOLEAN,
+  birthdate TIMESTAMP
+);
+
+DROP TABLE students;
+
+SELECT name, height FROM students;
+
+INSERT INTO students (name, age, height, have_siblings, birthdate) VALUES ('Random1', 12, 158.40, TRUE, TO_TIMESTAMP(941019325));
+INSERT INTO students (name, age, height, have_siblings, birthdate) VALUES ('Random2', 24, 158.40, TRUE, TO_TIMESTAMP(941019325));
+INSERT INTO students (name, age, height, have_siblings, birthdate) VALUES ('Random3', 45, 188.40, TRUE, TO_TIMESTAMP(911019325));
+INSERT INTO students (name, age, height, have_siblings, birthdate) VALUES ('Random6', 12, 138.40, TRUE, '1999-07-17 06:15:25');
+INSERT INTO students (name, have_siblings) VALUES ('Random3', TRUE);
+
+DELETE FROM students WHERE name LIKE 'random%';
+
+SELECT * FROM students;
+
+UPDATE students SET age=30 WHERE name='Random2';
+
+ALTER TABLE students ADD COLUMN address TEXT;
+ALTER TABLE students DROP COLUMN address;
+
+=====================================================================
 WHERE
 IN
 ORDER BY
@@ -13,6 +88,11 @@ ASC
 DESC
 GROUP BY
 LIMIT
+DISTINCT
+LIKE
+ON
+JOIN
+LEFT JOIN
 
 INTEGER
 TEXT
