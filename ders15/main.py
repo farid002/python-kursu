@@ -45,17 +45,13 @@ class Animal:
         print("Animal makes noise")
 
 class Dog(Animal):
-    def __init__(self, breed):
-        super().__init__("Rex", 0)
+    def __init__(self, name, age, breed):
+        super().__init__(name, age)
         self.breed = breed
-        self.name = "AAAA"
 
-    def make_noise(self):
-        print("Hav Hav")
+my_dog = Dog("rex", 5, "Doberman")
 
-my_dog = Dog("Doberman")
 my_dog.make_noise()
-
 print(my_dog.name)
 
 

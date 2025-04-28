@@ -7,6 +7,10 @@ UPDATE <table_name> SET col1 = val1, col2 = val2, col3 = val3 WHERE ...;
 DELETE FROM <table_name> WHERE ...;
 DROP TABLE <table_name>;
 ALTER TABLE <table_name> ADD COLUMN <column_name> INTEGER;
+ALTER TABLE <table_name> DROP COLUMN <column_name> INTEGER;
+ALTER TABLE <table_name> ALTER COLUMN <column_name> TYPE INTEGER;
+ALTER TABLE <table_name> RENAME COLUMN <old_column_name> TO <new_column_name>;
+ALTER TABLE <table_name> ALTER COLUMN <column_name> SET DEFAULT <value>;
 
 CREATE INDEX
 DROP INDEX
@@ -45,17 +49,17 @@ Geometric Types:
     POLYGON | Polygon
 
 Text:
-    TEXT -
+    TEXT - String
 
 =========================================================
 
 =====================================================================
-HANDS-ON
+Exercise 1...
 
 CREATE TABLE students (
   id SERIAL PRIMARY KEY,
   name TEXT,
-  age INTEGER,
+  age INTEGER DEFAULT 0,
   height FLOAT(2),
   have_siblings BOOLEAN,
   birthdate TIMESTAMP
@@ -82,21 +86,32 @@ ALTER TABLE students DROP COLUMN address;
 
 =====================================================================
 WHERE
-IN
-ORDER BY
-ASC
-DESC
-GROUP BY
-LIMIT
-DISTINCT
-LIKE
+IN -- SELECT * FROM students WHERE name IN ('Random1', 'Random2', 'Random3');
+IN -- SELECT * FROM students WHERE name = 'Random1';
+IN -- SELECT * FROM students WHERE name LIKE 'Random%';
+
+ORDER BY -- SELECT * FROM students ORDER BY age;
+ASC -- SELECT * FROM students ORDER BY age ASC;
+DESC -- SELECT * FROM students ORDER BY age DESC;
+COUNT -- SELECT COUNT(*) FROM students WHERE age>15;
+GROUP BY -- SELECT * FROM students GROUP BY age;
+LIMIT -- SELECT * FROM students LIMIT 3;
+DISTINCT -- SELECT DISTINCT ON (height) name, age, height FROM students; / SELECT DISTINCT ON (height) * FROM students;
+LIKE -- SELECT * FROM students WHERE name LIKE 'Random%';
+ILIKE -- SELECT * FROM students WHERE name ILIKE 'Random%';
+    Symbol  | Meaning                   | Example
+        %   | zero or more characters   | 'A%' matches 'Alice', 'Alex', 'America'
+        _   | exactly one character     | 'A_' matches 'Al', 'An', 'At'
 ON
+DEFAULT -- ...age INTEGER DEFAULT 0,...
 JOIN
 LEFT JOIN
+HAVING
 
-INTEGER
-TEXT
+COPY CSV HEADER
+
 PRIMARY KEY
+FOREIGN KEY
 """
 
 """

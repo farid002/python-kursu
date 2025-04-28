@@ -37,6 +37,9 @@ class Animal:
         print(noise)
 
 oghuzs_cat = Animal("mammal", 4, "AAAA", 5)
+oghuzs_cat.jump(20)
+
+
 print(oghuzs_cat.current_position)
 print(oghuzs_cat.name)
 

@@ -17,15 +17,15 @@ def salam_funksiyasi(firstname="Ali", lastname="Aliyev"):
 Parametrlər
 Defolt dəyər
 """
-def iki_eded_cemi(a, b):
+def iki_eded_cemi(a:int, b=5):
     """
     :param a: int
     :param b: int
     :return: int Iki ededin (a ve b) cemi
     """
-    global my_global_variable
-    my_global_variable = 5000
-    print(my_global_variable)
+    # global my_global_variable
+    # my_global_variable = 5000
+    # print(my_global_variable)
     return a + b
 
 def two_numbers_separate_square(a, b):
@@ -56,7 +56,7 @@ main funksiyası
 """
 
 """
-*args - list kimi davranış
+*args - tuple kimi davranış
 **kwargs - dict kimi davranış
 """
 
@@ -75,8 +75,24 @@ my_func(1, 2)
 global dəyişkənlər
 """
 
+def kwargslu_func(a, b=5, *args, **kwargs):
+    print(a, b)
+    print(args)
+    print(kwargs)
+
+def argsli_func(*args):
+    print(args)
+
+kwargslu_func(5, 7, 8, 9, 3, c=7, f=6)
+argsli_func(5, 3, 7, 6)
+
+
+my_sq_function = lambda x, y: (x ** 2, y ** 2)
+print(my_sq_function(30, 15))
+
 
 if __name__ == '__main__':
-    salam_funksiyasi(lastname="Valiyev")
-    print(iki_eded_cemi(1, 2))
-    print(my_global_variable)
+    print(iki_eded_cemi(2))
+    print(iki_eded_cemi(5, 2))
+    print(iki_eded_cemi(4, 2))
+    print(iki_eded_cemi(1, 5))

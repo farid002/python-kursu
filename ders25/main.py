@@ -7,15 +7,15 @@ a = np.array([1, 2, 3])
 print(a)
 
 
-Funksiya        İstifadəsi                      Nümunə
-np.array()	    Yeni array yaratmaq	            np.array([1, 2, 3])
-np.zeros()	    Sıfırlarla dolu array	          np.zeros((2, 3))
-np.ones()	      Birlərlə dolu array	            np.ones((3, 3))
-np.arange()	    Ədədi sıra yaratmaq	            np.arange(0, 10, 2)
-np.linspace()	  Bərabər intervallarla ədədlər	  np.linspace(0, 1, 5)
-np.reshape()	  Ölçünü dəyişmək	                a.reshape(3, 1)
-np.mean()	      Orta tapmaq	                    np.mean(a)
-np.max()	      Maksimum dəyər	                np.max(a)
+Funksiya            İstifadəsi                          Nümunə
+np.array()	        Yeni array yaratmaq	                np.array([1, 2, 3])
+np.zeros()	        Sıfırlarla dolu array	            np.zeros((2, 3))
+np.ones()	        Birlərlə dolu array	                np.ones((3, 3))
+np.arange()	        Ədədi sıra yaratmaq	                np.arange(0, 10, 2)
+np.linspace()	    Bərabər intervallarla ədədlər	    np.linspace(0, 1, 5)
+np.reshape()	    Ölçünü dəyişmək	                    a.reshape(3, 1)
+np.mean()	        Orta tapmaq	                        np.mean(a)
+np.max()	        Maksimum dəyər	                    np.max(a)
 
 a = np.array([1, 2, 3])
 b = np.array([4, 5, 6])

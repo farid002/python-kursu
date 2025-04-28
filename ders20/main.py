@@ -5,7 +5,7 @@ activate - deactivate
 
 Win:
 venv\Scripts\activate
-venv\Scripts\deactivate
+deactivate
 
 Unix (Linux, Mac):
 source venv/bin/activate

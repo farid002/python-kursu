@@ -85,3 +85,11 @@ from ders10.oghuz import factorial
 from ders10 import oghuz
 
 print(factorial(5))
+
+def my_function(x):
+    return x%3>5
+
+
+
+my_list = [1, 2, 3, 4, 5]
+print(list(filter(my_function, my_list)))
